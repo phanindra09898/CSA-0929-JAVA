@@ -1,0 +1,46 @@
+public class StringBuilderVsStringBufferDemo {
+    public static void main(String[] args) {
+       
+        StringBuilder stringBuilder = new StringBuilder("StringBuilder: ");
+        StringBuffer stringBuffer = new StringBuffer("StringBuffer: ");
+
+       
+        stringBuilder.append("Hello");
+        stringBuilder.append(" ");
+        stringBuilder.append("World");
+        System.out.println(stringBuilder); 
+
+
+        stringBuffer.append("Hello");
+        stringBuffer.append(" ");
+        stringBuffer.append("World");
+        System.out.println(stringBuffer);
+        int iterations = 1000000; 
+        long startTime, endTime;
+        
+      
+        startTime = System.currentTimeMillis();
+        StringBuilder stringBuilderTest = new StringBuilder();
+        for (int i = 0; i < iterations; i++) {
+            stringBuilderTest.append("Iteration ").append(i).append(" ");
+        }
+        endTime = System.currentTimeMillis();
+        System.out.println("Time taken using StringBuilder: " + (endTime - startTime) + " ms");
+
+    
+        startTime = System.currentTimeMillis();
+        StringBuffer stringBufferTest = new StringBuffer();
+        for (int i = 0; i < iterations; i++) {
+            stringBufferTest.append("Iteration ").append(i).append(" ");
+        }
+        endTime = System.currentTimeMillis();
+        System.out.println("Time taken using StringBuffer: " + (endTime - startTime) + " ms");
+    }
+}
+
+output:
+
+StringBuilder: Hello World
+StringBuffer: Hello World
+Time taken using StringBuilder: 383 ms
+Time taken using StringBuffer: 221 ms
