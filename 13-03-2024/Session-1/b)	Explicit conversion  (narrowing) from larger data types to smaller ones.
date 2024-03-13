@@ -1,0 +1,62 @@
+public class DataTypeConversionDemo {
+    public static void main(String[] args) {
+        
+        int intValue = 1000;
+        long longValue = 100000L;
+        float floatValue = 3.14f;
+        double doubleValue = 3.14159;
+        
+       
+        byte byteValue = (byte) intValue; 
+        short shortValue = (short) intValue; 
+        
+     
+        byteValue = (byte) longValue; 
+        shortValue = (short) longValue; 
+        intValue = (int) longValue; 
+        byteValue = (byte) floatValue; 
+        shortValue = (short) floatValue; 
+        intValue = (int) floatValue; 
+        longValue = (long) floatValue; 
+       
+        byteValue = (byte) doubleValue; 
+        shortValue = (short) doubleValue;
+        intValue = (int) doubleValue; 
+        longValue = (long) doubleValue; 
+        floatValue = (float) doubleValue; 
+        
+       
+        System.out.println("Converted values:");
+        System.out.println("int to byte: " + byteValue);
+        System.out.println("int to short: " + shortValue);
+        System.out.println("long to byte: " + byteValue);
+        System.out.println("long to short: " + shortValue);
+        System.out.println("long to int: " + intValue);
+        System.out.println("float to byte: " + byteValue);
+        System.out.println("float to short: " + shortValue);
+        System.out.println("float to int: " + intValue);
+        System.out.println("float to long: " + longValue);
+        System.out.println("double to byte: " + byteValue);
+        System.out.println("double to short: " + shortValue);
+        System.out.println("double to int: " + intValue);
+        System.out.println("double to long: " + longValue);
+        System.out.println("double to float: " + floatValue);
+    }
+}
+
+output:
+
+int to byte: 3
+int to short: 3
+long to byte: 3
+long to short: 3
+long to int: 3
+float to byte: 3
+float to short: 3
+float to int: 3
+float to long: 3
+double to byte: 3
+double to short: 3
+double to int: 3
+double to long: 3
+double to float: 3.14159
