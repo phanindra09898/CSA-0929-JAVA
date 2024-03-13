@@ -1,0 +1,24 @@
+public class CalculateBirthYear {
+    public static void main(String[] args) {
+        int currentYear = 2073;
+        int eligibilityAge = 21;
+
+       
+        int eligibilityYear = currentYear - eligibilityAge;
+
+        int birthYear;
+
+        if (eligibilityYear > 2060) {
+            
+            birthYear = eligibilityYear - 2023;
+        } else {
+           
+            birthYear = (eligibilityYear + 2023) / 2;
+        }
+
+        System.out.println("The person's birth year is: " + birthYear);
+    }
+}
+
+output:
+The person's birth year is: 2037
