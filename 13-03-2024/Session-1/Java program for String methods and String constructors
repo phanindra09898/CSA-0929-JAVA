@@ -1,0 +1,75 @@
+public class StringMethodsAndConstructorsDemo {
+    public static void main(String[] args) {
+   
+        String str1 = new String(); 
+        String str2 = new String("Hello"); 
+        char[] charArray = {'J', 'a', 'v', 'a'};
+        String str3 = new String(charArray); 
+        byte[] byteArray = {65, 66, 67, 68};
+        String str4 = new String(byteArray); 
+        String str5 = "World"; 
+        System.out.println("String Constructors:");
+        System.out.println("str1: " + str1);
+        System.out.println("str2: " + str2);
+        System.out.println("str3: " + str3);
+        System.out.println("str4: " + str4);
+        System.out.println("str5: " + str5);
+        
+      
+        String concatStr = str2.concat(" " + str5); 
+        System.out.println("\nString Methods:");
+        System.out.println("str2.concat(str5): " + concatStr);
+        
+        int length = concatStr.length(); 
+        System.out.println("Length of concatStr: " + length);
+        
+        char charAtIndex = concatStr.charAt(0); 
+        System.out.println("Character at index 0: " + charAtIndex);
+        
+        int indexOfStr5 = concatStr.indexOf(str5); 
+        System.out.println("Index of 'World': " + indexOfStr5);
+        
+        boolean startsWithHello = concatStr.startsWith("Hello"); 
+        System.out.println("Starts with 'Hello': " + startsWithHello);
+        
+        boolean endsWithWorld = concatStr.endsWith("World"); 
+        System.out.println("Ends with 'World': " + endsWithWorld);
+        
+        String lowercaseStr = concatStr.toLowerCase(); 
+        System.out.println("Lowercase: " + lowercaseStr);
+        
+        String uppercaseStr = concatStr.toUpperCase(); 
+        System.out.println("Uppercase: " + uppercaseStr);
+        
+        String replacedStr = concatStr.replace('o', 'x'); 
+        System.out.println("Replace 'o' with 'x': " + replacedStr);
+        
+        String substring = concatStr.substring(6); 
+        System.out.println("Substring from index 6: " + substring);
+        
+        String trimmedStr = concatStr.trim(); 
+        System.out.println("Trimmed String: " + trimmedStr);
+    }
+}
+
+output:
+
+String Constructors:
+str1: 
+str2: Hello
+str3: Java
+str4: ABCD
+str5: World
+
+String Methods:
+str2.concat(str5): Hello World
+Length of concatStr: 11
+Character at index 0: H
+Index of 'World': 6
+Starts with 'Hello': true
+Ends with 'World': true
+Lowercase: hello world
+Uppercase: HELLO WORLD
+Replace 'o' with 'x': Hellx Wxrld
+Substring from index 6: World
+Trimmed String: Hello World
