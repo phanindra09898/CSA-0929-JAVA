@@ -1,0 +1,37 @@
+public class MissingNumbersSeries {
+    public static void main(String[] args) {
+        int[] series = {1, 5, 11, 19}; 
+        
+        System.out.println("Missing numbers in the series are:");
+        for (int i = 1; i < series.length; i++) {
+            int difference = series[i] - series[i - 1];
+            if (difference > 1) {
+                
+                for (int j = 1; j < difference; j++) {
+                    int missingNumber = series[i - 1] + j;
+                    System.out.println(missingNumber);
+                }
+            }
+        }
+    }
+}
+
+
+output:
+
+Missing numbers in the series are:
+2
+3
+4
+6
+7
+8
+9
+10
+12
+13
+14
+15
+16
+17
+18
