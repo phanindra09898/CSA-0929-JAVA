@@ -1,0 +1,39 @@
+public class DataTypeConversionDemo {
+    public static void main(String[] args) {
+      
+        int intValue = 300; 
+        long longValue = 5000L; 
+        float floatValue = 3.14f; 
+        double doubleValue = 123456789.987654321; 
+
+      
+        byte byteOverflow = (byte) intValue; 
+      
+        byte byteOverflowFromLong = (byte) longValue; 
+        
+        short shortOverflow = (short) longValue;
+        
+        int intUnderflow = (int) floatValue;
+        
+       
+        int intUnderflowFromDouble = (int) doubleValue; 
+        
+       
+        System.out.println("Overflow and Underflow Scenarios:");
+        System.out.println("int to byte (Overflow): " + byteOverflow);
+        System.out.println("long to byte (Overflow): " + byteOverflowFromLong);
+        System.out.println("long to short (Overflow): " + shortOverflow);
+        System.out.println("float to int (Underflow): " + intUnderflow);
+        System.out.println("double to int (Underflow): " + intUnderflowFromDouble);
+    }
+}
+
+output:
+
+
+Overflow and Underflow Scenarios:
+int to byte (Overflow): 44
+long to byte (Overflow): -120
+long to short (Overflow): 5000
+float to int (Underflow): 3
+double to int (Underflow): 123456789
