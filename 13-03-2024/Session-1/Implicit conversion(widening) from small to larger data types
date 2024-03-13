@@ -1,0 +1,73 @@
+public class DataTypeConversionDemo {
+    public static void main(String[] args) {
+      
+        byte byteValue = 10;
+        short shortValue = 100;
+        int intValue = 1000;
+        long longValue = 10000L;
+        float floatValue = 3.14f;
+        double doubleValue = 3.14159;
+        
+        shortValue = byteValue;
+        intValue = byteValue;
+        longValue = byteValue;
+        floatValue = byteValue;
+        doubleValue = byteValue;
+        
+        
+        intValue = shortValue;
+        longValue = shortValue;
+        floatValue = shortValue;
+        doubleValue = shortValue;
+        
+      
+        longValue = intValue;
+        floatValue = intValue;
+        doubleValue = intValue;
+        
+       
+        floatValue = longValue;
+        doubleValue = longValue;
+        
+     
+        doubleValue = floatValue;
+        
+   
+        System.out.println("Converted values:");
+        System.out.println("byte to short: " + shortValue);
+        System.out.println("byte to int: " + intValue);
+        System.out.println("byte to long: " + longValue);
+        System.out.println("byte to float: " + floatValue);
+        System.out.println("byte to double: " + doubleValue);
+        System.out.println("short to int: " + intValue);
+        System.out.println("short to long: " + longValue);
+        System.out.println("short to float: " + floatValue);
+        System.out.println("short to double: " + doubleValue);
+        System.out.println("int to long: " + longValue);
+        System.out.println("int to float: " + floatValue);
+        System.out.println("int to double: " + doubleValue);
+        System.out.println("long to float: " + floatValue);
+        System.out.println("long to double: " + doubleValue);
+        System.out.println("float to double: " + doubleValue);
+    }
+}
+
+output:
+
+Converted values:
+byte to short: 10
+byte to int: 10
+byte to long: 10
+byte to float: 10.0
+byte to double: 10.0
+short to int: 10
+short to long: 10
+short to float: 10.0
+short to double: 10.0
+int to long: 10
+int to float: 10.0
+int to double: 10.0
+long to float: 10.0
+long to double: 10.0
+float to double: 10.0
+
