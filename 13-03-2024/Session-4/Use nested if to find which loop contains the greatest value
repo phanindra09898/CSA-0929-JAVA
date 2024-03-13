@@ -1,0 +1,33 @@
+public class FindGreatestLoop {
+    public static void main(String[] args) {
+        int[] loop1 = {5, 10, 15, 20};
+        int[] loop2 = {8, 12, 18, 22};
+
+        int sumLoop1 = 0;
+        int sumLoop2 = 0;
+
+       
+        for (int value : loop1) {
+            sumLoop1 += value;
+        }
+
+        
+        for (int value : loop2) {
+            sumLoop2 += value;
+        }
+
+        
+        if (sumLoop1 > sumLoop2) {
+            System.out.println("Loop 1 contains the greatest value.");
+        } else if (sumLoop2 > sumLoop1) {
+            System.out.println("Loop 2 contains the greatest value.");
+        } else {
+            System.out.println("Both loops contain the same sum of values.");
+        }
+    }
+}
+
+output:
+
+Loop 2 contains the greatest value.
+
