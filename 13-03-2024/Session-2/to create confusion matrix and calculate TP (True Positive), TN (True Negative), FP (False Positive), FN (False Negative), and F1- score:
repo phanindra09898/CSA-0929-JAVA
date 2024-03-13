@@ -1,0 +1,50 @@
+public class ConfusionMatrix {
+    public static void main(String[] args) {
+        int[][] actual = {{1, 0, 0}, {0, 1, 0}, {0, 0, 1}}; 
+        int[][] predicted = {{1, 0, 0}, {0, 1, 0}, {0, 1, 0}}; 
+
+        int[] results = calculateConfusionMatrix(actual, predicted);
+        int TP = results[0];
+        int TN = results[1];
+        int FP = results[2];
+        int FN = results[3];
+
+        double precision = (double) TP / (TP + FP);
+        double recall = (double) TP / (TP + FN);
+        double f1Score = 2 * (precision * recall) / (precision + recall);
+
+        System.out.println("True Positive (TP): " + TP);
+        System.out.println("True Negative (TN): " + TN);
+        System.out.println("False Positive (FP): " + FP);
+        System.out.println("False Negative (FN): " + FN);
+        System.out.println("F1-score: " + f1Score);
+    }
+
+    public static int[] calculateConfusionMatrix(int[][] actual, int[][] predicted) {
+        int TP = 0, TN = 0, FP = 0, FN = 0;
+        int n = actual.length;
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+                if (actual[i][j] == 1 && predicted[i][j] == 1)
+                    TP++;
+                else if (actual[i][j] == 0 && predicted[i][j] == 0)
+                    TN++;
+                else if (actual[i][j] == 0 && predicted[i][j] == 1)
+                    FP++;
+                else if (actual[i][j] == 1 && predicted[i][j] == 0)
+                    FN++;
+            }
+        }
+
+        return new int[]{TP, TN, FP, FN};
+    }
+}
+
+output:
+
+True Positive (TP): 2
+True Negative (TN): 5
+False Positive (FP): 1
+False Negative (FN): 1
+F1-score: 0.6666666666666666
