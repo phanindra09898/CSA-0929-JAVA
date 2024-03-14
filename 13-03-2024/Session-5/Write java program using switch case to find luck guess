@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class LuckyGuess {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Welcome to the Lucky Guess Game!");
+        System.out.print("Enter your guess (1-5): ");
+        int guess = scanner.nextInt();
+        
+        switch (guess) {
+            case 1:
+            case 3:
+            case 5:
+                System.out.println("Congratulations! You guessed the lucky number!");
+                break;
+            case 2:
+            case 4:
+                System.out.println("Sorry, your guess is not the lucky number.");
+                break;
+            default:
+                System.out.println("Invalid guess. Please enter a number between 1 and 5.");
+        }
+        
+        scanner.close();
+    }
+}
+
+output:
+
+Welcome to the Lucky Guess Game!
+Enter your guess (1-5): 1
+Congratulations! You guessed the lucky number!
