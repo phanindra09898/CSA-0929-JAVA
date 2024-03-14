@@ -1,0 +1,45 @@
+public class LoopPerformanceTest {
+    public static void main(String[] args) {
+        int iterations = 1000000; 
+        
+        long startTime, endTime; 
+        
+     
+        startTime = System.nanoTime(); 
+        for (int i = 0; i < iterations; i++) {
+            
+        }
+        endTime = System.nanoTime(); 
+        long forLoopTime = endTime - startTime; 
+        startTime = System.nanoTime(); 
+        int j = 0;
+        while (j < iterations) {
+            
+            j++;
+        }
+        endTime = System.nanoTime(); 
+        long whileLoopTime = endTime - startTime; 
+        startTime = System.nanoTime(); 
+        int k = 0;
+        do {
+            
+            k++;
+        } while (k < iterations);
+        endTime = System.nanoTime(); 
+        long doWhileLoopTime = endTime - startTime; 
+        
+        
+        if (forLoopTime < whileLoopTime && forLoopTime < doWhileLoopTime) {
+            System.out.println("For loop is the fastest.");
+        } else if (whileLoopTime < forLoopTime && whileLoopTime < doWhileLoopTime) {
+            System.out.println("While loop is the fastest.");
+        } else {
+            System.out.println("Do-while loop is the fastest.");
+        }
+    }
+}
+
+output:
+
+While loop is the fastest.
+
