@@ -1,0 +1,41 @@
+public class PerfectNumbers {
+
+    public static boolean isPerfect(int num) {
+        int divisorSum = 1;
+        for (int i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i == 0) {
+                divisorSum += i;
+                if (i != num / i) {
+                    divisorSum += num / i;
+                }
+            }
+        }
+        return divisorSum == num;
+    }
+
+    public static void firstNPerfectNumbers(int n) {
+        int count = 0;
+        int num = 2;
+        while (count < n) {
+            if (isPerfect(num)) {
+                System.out.println(num);
+                count++;
+            }
+            num++;
+        }
+    }
+
+    public static void main(String[] args) {
+        int n = 6; 
+        System.out.println("The first " + n + " perfect numbers are:");
+        firstNPerfectNumbers(n);
+    }
+}
+
+output:
+
+The first 6 perfect numbers are:
+6
+28
+496
+8128
